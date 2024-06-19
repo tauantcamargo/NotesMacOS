@@ -24,12 +24,34 @@ struct Home: View {
                 }
             }
             // Main Content
-            
+            MainContent()
         }
         .ignoresSafeArea()
         .frame(width: isMacOS() ? getRect().width / 1.7 : nil, height: isMacOS() ? getRect().height - 180 : nil, alignment: .leading)
         .background(Color("BG").ignoresSafeArea())
         .preferredColorScheme(.light)
+    }
+    
+    @ViewBuilder
+    func MainContent()->some View{
+        VStack(spacing: 6) {
+            SearchInput()
+        }
+        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .top)
+        .padding(.top, isMacOS() ? 40 : 15)
+        .padding(.horizontal,25)
+    }
+    
+    @ViewBuilder
+    func SearchInput()->some View{
+        HStack(spacing: 8) {
+            Image(systemName: "magnifyingglass")
+                .font(.title3)
+                .foregroundColor(.gray)
+            TextField("Search", text: .constant(""))
+        }
+        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+        .padding(.bottom,isMacOS() ? 0 : 10)
     }
     
     @ViewBuilder
@@ -77,6 +99,12 @@ struct Home: View {
                 showColors.toggle()
                 animateButton.toggle()
             }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                withAnimation(.spring()){
+                    animateButton.toggle()
+                }
+            }
         } label: {
             Image(systemName: "plus")
                 .font(.title2)
@@ -114,3 +142,14 @@ extension View {
         return true
     }
 }
+
+
+// Hiding focus ring
+#if os(macOS)
+extension NSTextField{
+    open override var focusRingType: NSFocusRingType {
+        get{.none}
+        set{}
+    }
+}
+#endif
