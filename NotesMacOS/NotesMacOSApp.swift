@@ -13,5 +13,9 @@ struct NotesMacOSApp: App {
         WindowGroup {
             ContentView()
         }
+        
+        #if os(macOS)
+        .windowStyle(HiddenTitleBarWindowStyle())
+        #endif
     }
 }
