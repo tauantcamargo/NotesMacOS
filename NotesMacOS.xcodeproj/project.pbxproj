@@ -14,6 +14,7 @@
 		9E821A422C22892300A50368 /* NotesMacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E821A412C22892300A50368 /* NotesMacOSTests.swift */; };
 		9E821A4C2C22892300A50368 /* NotesMacOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E821A4B2C22892300A50368 /* NotesMacOSUITests.swift */; };
 		9E821A4E2C22892300A50368 /* NotesMacOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E821A4D2C22892300A50368 /* NotesMacOSUITestsLaunchTests.swift */; };
+		9E821A5C2C22894200A50368 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E821A5B2C22894200A50368 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		9E821A472C22892300A50368 /* NotesMacOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesMacOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E821A4B2C22892300A50368 /* NotesMacOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesMacOSUITests.swift; sourceTree = "<group>"; };
 		9E821A4D2C22892300A50368 /* NotesMacOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesMacOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9E821A5B2C22894200A50368 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		9E821A2E2C22892200A50368 /* NotesMacOS */ = {
 			isa = PBXGroup;
 			children = (
+				9E821A5A2C22893B00A50368 /* View */,
 				9E821A2F2C22892200A50368 /* NotesMacOSApp.swift */,
 				9E821A312C22892200A50368 /* ContentView.swift */,
 				9E821A332C22892200A50368 /* Assets.xcassets */,
@@ -127,6 +130,14 @@
 				9E821A4D2C22892300A50368 /* NotesMacOSUITestsLaunchTests.swift */,
 			);
 			path = NotesMacOSUITests;
+			sourceTree = "<group>";
+		};
+		9E821A5A2C22893B00A50368 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E821A5B2C22894200A50368 /* Home.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E821A322C22892200A50368 /* ContentView.swift in Sources */,
+				9E821A5C2C22894200A50368 /* Home.swift in Sources */,
 				9E821A302C22892200A50368 /* NotesMacOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
