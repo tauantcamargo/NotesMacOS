@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     @State var showColors: Bool = false
+    @State var animateButton: Bool = false
     
     var body: some View {
         HStack(spacing: 0) {
@@ -40,6 +41,7 @@ struct Home: View {
             
             // Add Button
             AddButton()
+                .zIndex(1)
             
             // Colors
             VStack(spacing: 15){
@@ -60,6 +62,7 @@ struct Home: View {
             .padding(.top,20)
             .frame(height: showColors ? nil : 0)
             .opacity(showColors ? 1 : 0)
+            .zIndex(0)
         }
         .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .top)
         .padding(.vertical)
@@ -70,17 +73,21 @@ struct Home: View {
     @ViewBuilder
     func AddButton()->some View{
         Button {
-            withAnimation{
+            withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.6, blendDuration: 0.6)){
                 showColors.toggle()
+                animateButton.toggle()
             }
         } label: {
             Image(systemName: "plus")
                 .font(.title2)
                 .foregroundStyle(.white)
+                .scaleEffect(animateButton ? 1.1 : 1)
                 .padding(isMacOS() ? 12 : 15)
                 .background(Color.black)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
         }
+        .rotationEffect(.init(degrees: showColors ? 45 : 0))
+        .scaleEffect(animateButton ? 1.1 : 1)
         .padding(.top,30)
     }
 }
