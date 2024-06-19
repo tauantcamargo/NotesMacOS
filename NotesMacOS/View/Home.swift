@@ -26,7 +26,9 @@ struct Home: View {
             // Main Content
             MainContent()
         }
+        #if os(macOS)
         .ignoresSafeArea()
+        #endif
         .frame(width: isMacOS() ? getRect().width / 1.7 : nil, height: isMacOS() ? getRect().height - 180 : nil, alignment: .leading)
         .background(Color("BG").ignoresSafeArea())
         .preferredColorScheme(.light)

@@ -47,6 +47,7 @@
 		9E821A4B2C22892300A50368 /* NotesMacOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesMacOSUITests.swift; sourceTree = "<group>"; };
 		9E821A4D2C22892300A50368 /* NotesMacOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesMacOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9E821A5B2C22894200A50368 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		9ECF2D4F2C22995600BA1F1F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 		9E821A232C22892200A50368 = {
 			isa = PBXGroup;
 			children = (
+				9ECF2D4F2C22995600BA1F1F /* README.md */,
 				9E821A2E2C22892200A50368 /* NotesMacOS */,
 				9E821A402C22892300A50368 /* NotesMacOSTests */,
 				9E821A4A2C22892300A50368 /* NotesMacOSUITests */,
